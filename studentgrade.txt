@@ -1,0 +1,49 @@
+import java.util.Scanner;
+import java.io.*;
+public class StudentGrade {
+	private static Scanner sc;
+	public static void main(String[] args) {
+		int english, chemistry, computers, physics, maths; 
+	    float total, Percentage;
+		sc = new Scanner(System.in);
+		System.out.println(" Please Enter the Five Subjects Marks : \n");
+		System.out.println("Please Enter the english Mark : ");
+		english = sc.nextInt();	
+		System.out.print(" Please Enter the Chemistry Mark : ");
+		chemistry = sc.nextInt();	
+		System.out.print(" Please Enter the Computer Mark : ");
+		computers = sc.nextInt();	
+		System.out.print(" Please Enter the Physics Mark : ");
+		physics = sc.nextInt();	
+		System.out.print(" Please Enter the Mathematics Mark : ");
+		maths = sc.nextInt();	
+		total = english + chemistry + computers + physics + maths;
+	    Percentage = (total / 500) * 100;
+	    System.out.println(" Total Marks =   " + total);
+	    System.out.println("\n Marks Percentage =  " + Percentage);
+		if(Percentage >= 90)
+	    {
+			System.out.println("\n Grade A");
+		}
+		else if(Percentage >= 80)
+	    {
+			System.out.println("\n Grade B");
+		}
+		else if(Percentage >= 70)
+	    {
+			System.out.println("\n Grade C");
+		}
+		else if(Percentage >= 60)
+	    {
+			System.out.println("\n Grade D");
+		}
+		else if(Percentage >= 40)
+	    {
+			System.out.println("\n Grade E");
+		}
+		else 
+	    {
+			System.out.println("\n Fail");
+		} 
+	}
+}
